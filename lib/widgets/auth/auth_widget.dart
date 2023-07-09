@@ -92,12 +92,17 @@ class __ButtonsWidgetState extends State<_ButtonsWidget> {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        // TODO(Denis): Размеры чего-либо лучше не задавать на жесткую
+        //* Если нужен отступ от краев, то его через паддинг можно задать
         Container(
           width: 312,
           child: OutlinedButton(
             onPressed: () {},
+            // TODO(Denis): стили и цвета надо выносить в отдельный класс
             style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(
+                  // TODO(Denis): цвета лучше писать в hex формате
+                  //* И их тоже выносить в отлельный класс с темой
                   const Color.fromRGBO(255, 140, 0, 1),
                 ),
                 foregroundColor: MaterialStateProperty.all(Colors.white),
@@ -138,6 +143,7 @@ class __ButtonsWidgetState extends State<_ButtonsWidget> {
         const SizedBox(height: 90),
         const Text(
           'Вход через соцсеть',
+          // TODO(Denis): стили текста тоже надо выносить, потом их проще переиспользовать
           style: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w500,
@@ -147,6 +153,7 @@ class __ButtonsWidgetState extends State<_ButtonsWidget> {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            // TODO(Denis): повторяющиеся виджеты нужно выносить в отдельный и переиспользовать
             OutlinedButton(
               onPressed: () {},
               style: ButtonStyle(
